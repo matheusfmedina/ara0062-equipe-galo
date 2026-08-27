@@ -14,7 +14,7 @@ Site de uma empresa que informa sobre os ultimos acontecimentos do mundo da tecn
 | Nome completo | Matrícula | GitHub | Papel |
 |---|---|---|---|
 | Matheus Felipe Medina Moreira | 202602749611 | @matheusfmedina | **líder** |
-| Carlos Eduardo Ramos | 2026xxxxx | @cadu-ramos | integrante |
+| Arthur Pereira Galdino | 202603673243 | @arthutgaldino14 | integrante |
 | Daniela Prado Vieira | 2026xxxxx | @dani-prado | integrante |
 | Felipe Antunes Costa | 2026xxxxx | @felipeac | integrante |
 | Marina Souza Lima | 2026xxxxx | @marinaslima | integrante |
