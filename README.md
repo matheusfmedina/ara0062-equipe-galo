@@ -15,7 +15,7 @@ Site de uma empresa que informa sobre os ultimos acontecimentos do mundo da tecn
 |---|---|---|---|
 | Matheus Felipe Medina Moreira | 202602749611 | @matheusfmedina | **líder** |
 | Arthur Pereira Galdino | 202603673243 | @arthutgaldino14 | integrante |
-| Daniela Prado Vieira | 2026xxxxx | @dani-prado | integrante |
+| Leonardo Arthur Viana Bacelete | 202601384775 | @leonardoarthur08 | integrante |
 | Felipe Antunes Costa | 2026xxxxx | @felipeac | integrante |
 | Marina Souza Lima | 2026xxxxx | @marinaslima | integrante |
 | Rafael Teixeira Alves | 2026xxxxx | @rafaelalves | integrante |
