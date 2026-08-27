@@ -16,3 +16,5 @@ Site de uma empresa que informa sobre os ultimos acontecimentos do mundo da tecn
 | Matheus Felipe Medina Moreira | 202602749611 | @matheusfmedina | **líder** |
 | Arthur Pereira Galdino | 202603673243 | @arthutgaldino14 | integrante |
 | Leonardo Arthur Viana Bacelete | 202601384775 | @leonardoarthur08 | integrante |
+| João Victor Cezario Leão | 202608088357 | @jvleao01 | integrante | 
+| Giovanna Diniz Lanna | 202608088373 | @GiovannaDinizLanna | integrante
