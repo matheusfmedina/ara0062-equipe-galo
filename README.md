@@ -22,8 +22,11 @@ Site de uma empresa que informa sobre os ultimos acontecimentos do mundo da tecn
 # Galo Informa
 
 *Assunto:* Jornal diário com os principais acontecimentos do mundo da tecnologia
+
 *Equipe:* Arthur Pereira Galdino · Giovanna Diniz Lanna · João Victor Cezario Leão · Leonardo Arthur Viana Bacelete · Matheus Felipe Medina Moreira
+
 *Disciplina:* ARA0062 — Desenvolvimento Web em HTML5, CSS, JavaScript e PHP
+
 *Centro Universitário Newton Paiva · 2026/2*
 
 ---
