@@ -103,7 +103,7 @@ text
 │   ├─ index.html
 │   ├─ css/
 │   │   ├─ estilo.css        a folha do projeto
-│   │   └─ tema-escuro.css   o segundo tema: só variáveis
+│   │   └─ noturno.css   o segundo tema: só variáveis
 │   ├─ js/
 │   │   └─ script.js         vazio até o ciclo 6
 │   └─ img/
