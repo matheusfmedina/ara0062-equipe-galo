@@ -14,6 +14,7 @@
      que fica em cima do fundo — e, num tema escuro, ele chega a ser o
      oposto. Variável com dois papéis é o que quebra na hora de trocar o
      tema. */
+     
   --principal:        #023d75;   /* cabeçalho, títulos, botão principal */
   --principal-escuro: #183e4d;   /* o hover do botão principal          */
   --sobre-principal:  #ffffff;   /* texto em cima da cor principal      */

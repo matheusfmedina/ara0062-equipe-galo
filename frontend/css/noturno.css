@@ -1,0 +1,301 @@
+:root {
+  /* tipografia */
+  --fonte: "Poppins", "Segoe UI", Arial, Helvetica, sans-serif;
+
+  /* cores — modo noturno */
+  --principal:        #3b82f6;   /* cabeçalho, títulos, botão principal */
+  --principal-escuro: #2563eb;   /* hover do botão principal */
+  --sobre-principal:  #ffffff;   /* texto sobre a cor principal */
+
+  --barra:            #111827;   /* menu e rodapé */
+  --sobre-barra:      #e5e7eb;   /* texto sobre a barra */
+
+  --apoio:            #22c55e;   /* h3 e cabeçalho da tabela */
+  --realce:           #60a5fa;   /* contorno do foco */
+  --realce-suave:     #1e3a5f;   /* fundos leves e destaques */
+
+  --fundo:            #0f172a;   /* fundo geral da página */
+  --superficie:       #1e293b;   /* cards, formulário e conteúdo */
+  --zebra:            #172033;   /* linhas pares da tabela */
+  --texto:            #e5e7eb;   /* texto principal */
+  --texto-fraco:      #94a3b8;   /* texto secundário */
+  --linha:            #334155;   /* bordas */
+}
+
+body {
+  font-family: var(--fonte);
+  font-size: 1rem;
+  line-height: 1.6;
+
+  color: var(--texto);
+  background-color: var(--fundo);
+
+  max-width: 860px;
+  margin: 0 auto;        /* 0 em cima/embaixo, automático nas laterais */
+  padding: 0 20px 40px;
+}
+
+header {
+  background-color: var(--principal);
+  color: var(--sobre-principal);
+  padding: 36px 28px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+/* Descendente: só o parágrafo que está dentro do header. */
+header p {
+  margin: 0;
+  color: var(--sobre-principal);
+  opacity: 0.85;          /* um degrau abaixo do h1, sem inventar outra cor */
+}
+
+nav {
+  background-color: var(--barra);
+  padding: 0 16px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: inline-block;
+  padding: 14px 16px;
+  color: var(--sobre-barra);
+  text-decoration: none;     /* tira o sublinhado do link */
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+nav a:hover {
+  background-color: var(--principal);
+  color: var(--sobre-principal);
+}
+
+nav a:focus {
+  outline: 3px solid var(--realce);
+  outline-offset: 2px;
+}
+
+main {
+  background-color: var(--superficie);
+  padding: 8px 32px 32px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--principal);
+  border-bottom: 2px solid var(--realce-suave);
+  padding-bottom: 8px;
+  margin-top: 36px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--apoio);
+}
+
+a {
+  color: var(--principal);
+}
+
+a:hover {
+  color: var(--principal-escuro);
+}
+
+img {
+  max-width: 100%;      /* a imagem nunca estoura a coluna */
+  height: auto;
+  border-radius: 6px;
+}
+
+/* As listas de conteúdo continuam sendo listas — só ficam mais arejadas. */
+main ul li,
+main ol li {
+  margin-bottom: 6px;
+}
+
+strong {
+  color: var(--principal-escuro);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0 8px;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  color: var(--apoio);
+  padding-bottom: 10px;
+}
+
+th,
+td {
+  border: 1px solid var(--linha);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--apoio);
+  color: var(--superficie);  
+}
+
+tbody th {
+  background-color: var(--fundo);
+  color: var(--principal);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--zebra);
+}
+
+tbody tr:hover {
+  background-color: var(--realce-suave);
+}
+
+form {
+  background-color: var(--fundo);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--principal);
+}
+
+fieldset {
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+  background-color: var(--superficie);
+  padding: 18px 20px 6px;
+  margin-bottom: 18px;
+}
+
+legend {
+  color: var(--principal);
+  font-weight: 600;
+  padding: 0 8px;
+}
+form div {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+
+  background-color: var(--superficie);
+  color: var(--texto);
+
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 7.5rem;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+  font-weight: 400;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--realce);
+  outline-offset: 1px;
+  border-color: var(--principal);
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: var(--principal);
+  color: var(--sobre-principal);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--principal-escuro);
+}
+
+button[type="reset"] {
+  background-color: var(--superficie);
+  color: var(--texto-fraco);
+  border: 1px solid var(--linha);
+  margin-left: 8px;
+}
+
+button:focus {
+  outline: 3px solid var(--realce);
+  outline-offset: 2px;
+}
+
+aside {
+  background-color: var(--superficie);
+  border-left: 4px solid var(--realce);
+  padding: 20px 28px;
+  margin-top: 4px;
+}
+
+aside h2 {
+  margin-top: 8px;
+  font-size: 1.25rem;
+  border-bottom: none;
+}
+
+footer {
+  background-color: var(--barra);
+  color: var(--sobre-barra);
+  padding: 20px 28px;
+  font-size: 0.875rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.destaque {
+  background-color: var(--realce-suave);
+  border-left: 4px solid var(--principal);
+  padding: 12px 16px;
+}
