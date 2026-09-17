@@ -43,14 +43,23 @@ Estas são as decisões que o frontend/css/estilo.css aplica. Elas estão aqui p
 
 ### Paleta
 
-| Papel               | Cor       | Por que esta                                                                      |
-| ------------------- | --------- | --------------------------------------------------------------------------------- |
-| --principal       | #111111 | Cabeçalho e elementos principais; representa uma identidade moderna e tecnológica |
-| --sobre-principal | #FFFFFF | Texto sobre a cor principal, garantindo boa leitura                               |
-| --apoio           | #F5C400 | Botões, destaques e chamadas para o cadastro do jornal                            |
-| --fundo           | #F5F5F5 | Fundo geral das páginas, proporcionando uma aparência limpa                       |
-| --superficie      | #FFFFFF | Cartões de notícias e áreas de conteúdo                                           |
-| --texto           | #222222 | Texto principal das notícias e demais conteúdos                                   |
+| Papel                | Cor       | Por que esta                                                                 |
+| -------------------- | --------- | ---------------------------------------------------------------------------- |
+| `--principal`        | `#023d75` | Cabeçalho, títulos e botão principal; transmite confiança e tecnologia       |
+| `--principal-escuro` | `#183e4d` | Hover do botão principal, criando uma variação mais escura da cor principal  |
+| `--sobre-principal`  | `#ffffff` | Texto sobre a cor principal, garantindo boa leitura                          |
+| `--barra`            | `#004c56` | Menu e rodapé; mantém a identidade visual e diferencia as áreas de navegação |
+| `--sobre-barra`      | `#f0d7e6` | Texto sobre a barra, criando contraste e destaque                            |
+| `--apoio`            | `#055d60` | Subtítulos, cabeçalho da tabela e elementos de apoio                         |
+| `--realce`           | `#dda858` | Contornos de foco e elementos que precisam de destaque                       |
+| `--realce-suave`     | `#f0d7e6` | Fundos leves, destaques, zebra ao passar o mouse e detalhes visuais          |
+| `--fundo`            | `#f4eff2` | Fundo geral das páginas, criando uma aparência suave                         |
+| `--superficie`       | `#ffffff` | Cartões, notícias e áreas de conteúdo                                        |
+| `--zebra`            | `#faf7f9` | Linhas pares das tabelas, facilitando a leitura                              |
+| `--texto`            | `#231f20` | Texto principal das notícias e demais conteúdos                              |
+| `--texto-fraco`      | `#51506b` | Textos secundários e informações de menor destaque                           |
+| `--linha`            | `#e2d8de` | Bordas e divisórias entre elementos                                          |
+
 
 text
 --texto sobre --superficie ......... 15,5:1
