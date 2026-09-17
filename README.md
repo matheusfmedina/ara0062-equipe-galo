@@ -5,9 +5,7 @@ e PHP** — Centro Universitário Newton Paiva, 2026/2.
 
 ## Tema do projeto
 
-Site de uma empresa que informa sobre os ultimos acontecimentos do mundo da tecnologia.
-
-## Equipe
+Jornal diário com os principais acontecimentos do mundo da tecnologia.
 
 **Líder:** Matheus Feipe Medina Moreira
 
