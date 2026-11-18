@@ -1,0 +1,557 @@
+/* ==========================================================================
+   ARA0062 — Galo Informa
+   Identidade visual: branco, azul-marinho e vermelho.
+   ========================================================================== */
+
+:root {
+  /* tipografia */
+  --fonte: "Poppins", "Segoe UI", Arial, Helvetica, sans-serif;
+
+  /* cores principais */
+  --principal: #183153;
+  --principal-escuro: #10243d;
+  --sobre-principal: #ffffff;
+
+  --barra: #183153;
+  --sobre-barra: #ffffff;
+
+  --apoio: #D62828;
+  --realce: #D62828;
+  --realce-suave: #F4F6F8;
+
+  --fundo: #ffffff;
+  --superficie: #ffffff;
+  --zebra: #F4F6F8;
+  --texto: #333333;
+  --texto-fraco: #666666;
+  --linha: #e2e5e9;
+}
+
+
+/* ==========================================================================
+   1. A PÁGINA
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: var(--fonte);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--fundo);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+
+/* ==========================================================================
+   2. CABEÇALHO
+   ========================================================================== */
+
+header {
+  background-color: var(--superficie);
+  color: var(--principal);
+  padding: 28px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+header h1 span {
+  color: var(--apoio);
+}
+
+header p {
+  margin: 0;
+  color: var(--texto-fraco);
+}
+
+
+/* ==========================================================================
+   3. O MENU
+   ========================================================================== */
+
+nav {
+  background-color: var(--barra);
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: inline-block;
+  padding: 14px 16px;
+  color: var(--sobre-barra);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--principal-escuro);
+  color: var(--sobre-principal);
+}
+
+nav a:focus {
+  outline: 3px solid var(--realce);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   4. CONTEÚDO
+   ========================================================================== */
+
+main {
+  background-color: var(--superficie);
+  padding: 8px 32px 32px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--principal);
+  border-bottom: 2px solid var(--linha);
+  padding-bottom: 8px;
+  margin-top: 36px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--apoio);
+}
+
+a {
+  color: var(--principal);
+}
+
+a:hover {
+  color: var(--apoio);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+main section:not(.destaque):not(.cadastro) {
+  padding: 24px 0;
+}
+
+main section p {
+  color: var(--texto-fraco);
+}
+
+main ul li,
+main ol li {
+  margin-bottom: 6px;
+}
+
+strong {
+  color: var(--principal-escuro);
+}
+
+
+/* ==========================================================================
+   5. DESTAQUE PRINCIPAL
+   ========================================================================== */
+
+.destaque {
+  background-color: var(--realce-suave);
+  border-left: 5px solid var(--apoio);
+  padding: 65px 35px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 15px 0 30px;
+}
+
+.destaque-conteudo {
+  max-width: 750px;
+  margin: auto;
+}
+
+.destaque .subtitulo {
+  color: var(--apoio);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.destaque h2 {
+  font-size: 2.3rem;
+  color: var(--principal);
+  border: none;
+  padding: 0;
+  margin: 15px 0;
+  line-height: 1.3;
+}
+
+.destaque h2 span {
+  color: var(--apoio);
+}
+
+.destaque p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: var(--texto-fraco);
+  text-align: center;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--apoio);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #AC1F1F;
+  color: #ffffff;
+}
+
+
+/* ==========================================================================
+   6. EQUIPE
+   ========================================================================== */
+
+.lista-equipe {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.lista-equipe li {
+  background-color: var(--realce-suave);
+  border-left: 4px solid var(--apoio);
+  padding: 16px;
+  border-radius: 5px;
+  color: var(--principal);
+  font-weight: 500;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   7. A TABELA
+   ========================================================================== */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0 8px;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  color: var(--apoio);
+  padding-bottom: 10px;
+}
+
+th,
+td {
+  border: 1px solid var(--linha);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--principal);
+  color: var(--sobre-principal);
+}
+
+tbody th {
+  background-color: var(--fundo);
+  color: var(--principal);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--zebra);
+}
+
+tbody tr:hover {
+  background-color: var(--realce-suave);
+}
+
+
+/* ==========================================================================
+   8. FORMULÁRIOS
+   ========================================================================== */
+
+form {
+  background-color: var(--fundo);
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 4px solid var(--principal);
+}
+
+fieldset {
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+  background-color: var(--superficie);
+  padding: 18px 20px 6px;
+  margin-bottom: 18px;
+}
+
+legend {
+  color: var(--principal);
+  font-weight: 600;
+  padding: 0 8px;
+}
+
+form div {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+  background-color: var(--superficie);
+  color: var(--texto);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 7.5rem;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+  font-weight: 400;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--realce);
+  outline-offset: 1px;
+  border-color: var(--principal);
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: var(--apoio);
+  color: var(--sobre-principal);
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #AC1F1F;
+}
+
+button[type="reset"] {
+  background-color: var(--superficie);
+  color: var(--texto-fraco);
+  border: 1px solid var(--linha);
+  margin-left: 8px;
+}
+
+button:focus {
+  outline: 3px solid var(--realce);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   9. ÁREA DE CADASTRO
+   ========================================================================== */
+
+.cadastro {
+  background-color: var(--principal);
+  padding: 55px 25px;
+  margin-top: 30px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.cadastro h2 {
+  color: #ffffff;
+  border: none;
+  margin-top: 0;
+}
+
+.cadastro p {
+  color: #e0e6ed;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.cadastro form {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cadastro input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.cadastro button {
+  padding: 12px 22px;
+}
+
+.cadastro small {
+  display: block;
+  color: #e0e6ed;
+  margin-top: 15px;
+}
+
+
+/* ==========================================================================
+   10. BARRA LATERAL E RODAPÉ
+   ========================================================================== */
+
+aside {
+  background-color: var(--superficie);
+  border-left: 4px solid var(--realce);
+  padding: 20px 28px;
+  margin-top: 4px;
+}
+
+aside h2 {
+  margin-top: 8px;
+  font-size: 1.25rem;
+  border-bottom: none;
+}
+
+footer {
+  background-color: var(--barra);
+  color: var(--sobre-barra);
+  padding: 25px 28px;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer h3 {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+footer p {
+  color: #e0e6ed;
+  margin: 5px 0;
+}
+
+
+/* ==========================================================================
+   11. RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 0 10px 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  main {
+    padding: 8px 18px 25px;
+  }
+
+  .destaque {
+    padding: 45px 18px;
+  }
+
+  .destaque h2 {
+    font-size: 1.8rem;
+  }
+
+  .lista-equipe {
+    grid-template-columns: 1fr;
+  }
+
+  .cadastro form {
+    flex-direction: column;
+  }
+
+  .cadastro input,
+  .cadastro button {
+    width: 100%;
+  }
+}
