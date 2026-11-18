@@ -1,12 +1,45 @@
 <?php
-/* ===========================================================================
-   ARA0062 — recebe o formulário de contato do frontend
-   Este arquivo começa vazio de propósito: o PHP entra no ciclo 8.
+$nome = trim(filter_input(INPUT_POST, 'nome', FILTER_UNSAFE_RAW) ?? '');
+$email = trim(filter_input(INPUT_POST, 'email', FILTER_UNSAFE_RAW) ?? '');
 
-   No ciclo 8 ele passa a ler os campos enviados pelo formulário
-   (frontend/index.html), validar do lado do servidor e gravar no banco
-   usando a conexão de config/conexao.php.
+$nomeSeguro = htmlspecialchars($nome, ENT_QUOTES, 'UTF-8');
+$emailSeguro = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
 
-   É para cá que o atributo action do formulário vai apontar:
-   <form action="../backend/processa-contato.php" method="post">
-   =========================================================================== */
+$dadosValidos = $nome !== ''
+    && strlen($nome) <= 100
+    && filter_var($email, FILTER_VALIDATE_EMAIL)
+    && strlen($email) <= 150;
+?>
+<!DOCTYPE html>
+   <html lang="pt-BR">
+      <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Mensagem recebida — Equipe Galo</title>
+         <link rel="stylesheet" href="../frontend/css/estilo.css">
+      </head>
+      <body>
+         <header>
+            <h1>Equipe Galo</h1>
+         </header>
+         <main>
+            <section id="resposta">
+               <?php if ($dadosValidos): ?>
+                  <h2>Obrigado, <?php echo $nomeSeguro; ?>!</h2>
+                  <p>
+                     Seu cadastro foi realizado com sucesso.
+                     As novidades serão enviadas para o e-mail
+                     <strong><?php echo $emailSeguro; ?></strong>.
+                  </p>
+               <?php else: ?>
+                  <h2>Não foi possível confirmar seu cadastro</h2>
+                  <p>Informe um nome válido e um endereço de e-mail válido.</p>
+               <?php endif; ?>
+               <p><a href="../frontend/index.html#contato">← Voltar para a página</a></p>
+            </section>
+         </main>
+         <footer>
+            <p>Equipe Galo &middot; 2026 &middot; ARA0062 &middot; Newton Paiva</p>
+         </footer>
+      </body>
+</html>
