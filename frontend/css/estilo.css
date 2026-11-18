@@ -555,3 +555,264 @@ footer p {
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   12. TEMA NOTURNO
+   ========================================================================== */
+
+body.tema-noturno {
+  --principal: #e6edf5;
+  --principal-escuro: #cbd7e5;
+  --sobre-principal: #ffffff;
+
+  --barra: #172536;
+  --sobre-barra: #ffffff;
+
+  --apoio: #ff5555;
+  --realce: #ff7777;
+  --realce-suave: #243344;
+
+  --fundo: #121820;
+  --superficie: #1b2633;
+  --zebra: #202d3b;
+  --texto: #e6edf3;
+  --texto-fraco: #b7c2cf;
+  --linha: #344253;
+}
+
+/* Fundo e textos */
+
+body.tema-noturno {
+  background-color: var(--fundo);
+  color: var(--texto);
+}
+
+body.tema-noturno header,
+body.tema-noturno main,
+body.tema-noturno aside {
+  background-color: var(--superficie);
+}
+
+/* Cabeçalho */
+
+body.tema-noturno header p {
+  color: var(--texto-fraco);
+}
+
+/* Menu */
+
+body.tema-noturno nav {
+  background-color: var(--barra);
+}
+
+/* Banner */
+
+body.tema-noturno .destaque {
+  background-color: var(--realce-suave);
+}
+
+body.tema-noturno .destaque p {
+  color: var(--texto-fraco);
+}
+
+/* Seções */
+
+body.tema-noturno main section p {
+  color: var(--texto-fraco);
+}
+
+body.tema-noturno .lista-equipe li {
+  background-color: var(--zebra);
+  color: var(--texto);
+}
+
+/* Tabelas */
+
+body.tema-noturno thead th {
+  background-color: #263b52;
+  color: #ffffff;
+}
+
+body.tema-noturno tbody th {
+  background-color: var(--zebra);
+  color: var(--texto);
+}
+
+/* Formulários */
+
+body.tema-noturno form {
+  background-color: var(--fundo);
+}
+
+body.tema-noturno fieldset {
+  background-color: var(--superficie);
+}
+
+body.tema-noturno input,
+body.tema-noturno select,
+body.tema-noturno textarea {
+  background-color: #243344;
+  color: #ffffff;
+  border-color: #46576a;
+}
+
+body.tema-noturno input::placeholder {
+  color: #b7c2cf;
+}
+
+/* Área de cadastro */
+
+body.tema-noturno .cadastro {
+  background-color: #172536;
+}
+
+body.tema-noturno .cadastro form {
+  background-color: transparent;
+}
+
+/* Rodapé */
+
+body.tema-noturno footer {
+  background-color: #0b121b;
+}
+
+/* Botão de alternar tema */
+
+#alternar-tema {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  margin: 5px 10px;
+  transition: 0.3s;
+}
+
+#alternar-tema:hover {
+  background-color: #ffffff;
+  color: #183153;
+}
+
+#alternar-tema:focus {
+  outline: 3px solid var(--realce);
+  outline-offset: 3px;
+}
+
+/* Transição entre os temas */
+
+body,
+header,
+main,
+section,
+aside,
+footer,
+nav,
+form,
+input,
+textarea,
+select {
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+/* Ajustes para celular */
+
+@media (max-width: 600px) {
+  #alternar-tema {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+
+/* ==========================================================================
+   13. NOTIFICAÇÕES DE CADASTRO
+   ========================================================================== */
+
+/* Notificação fixa no canto superior direito */
+
+#mensagem-cadastro {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 9999;
+
+  display: block;
+  width: 320px;
+  max-width: calc(100% - 40px);
+  margin: 0;
+  padding: 20px;
+
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-15px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s ease;
+}
+
+/* Notificação de sucesso */
+
+#mensagem-cadastro.mensagem-sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Notificação de erro */
+
+#mensagem-cadastro.mensagem-erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Exibição da notificação */
+
+#mensagem-cadastro.notificacao-visivel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Notificações no tema noturno */
+
+body.tema-noturno #mensagem-cadastro.mensagem-sucesso {
+  background-color: #183d2b;
+  color: #a8e6bd;
+  border-color: #286344;
+}
+
+body.tema-noturno #mensagem-cadastro.mensagem-erro {
+  background-color: #48252a;
+  color: #ffb3b8;
+  border-color: #71343b;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+  #mensagem-cadastro {
+    top: 15px;
+    right: 50%;
+    width: 300px;
+    max-width: calc(100% - 30px);
+    transform: translate(50%, -15px);
+  }
+
+  #mensagem-cadastro.notificacao-visivel {
+    transform: translate(50%, 0);
+  }
+}
