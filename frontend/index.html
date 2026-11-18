@@ -1,60 +1,196 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projeto da disciplina ARA0062 — Equipe Delta.">
-    <title>Galo Informa</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="css/estilo.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
+  <meta name="description" content="Galo Informa - Seu jornal digital de tecnologia.">
 
-    <header>
-      <h1>Galo Informa</h1>
-      <p>Seu jornal digital de tecnologia</p>
-    </header>
+  <title>Galo Informa</title>
 
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#equipe">Equipe</a></li>
-      </ul>
-    </nav>
+  <!-- Fonte Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <main>
-      <section id="sobre">
-        <h2>Sobre a empresa</h2>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Galo <span>Informa</span></h1>
+    <p>Seu jornal digital de tecnologia</p>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+      <li><a href="#equipe">Equipe</a></li>
+      <li><a href="#cadastro">Receber notícias</a></li>
+
+      <li>
+        <button
+          type="button"
+          id="alternar-tema"
+          aria-label="Alternar entre tema claro e noturno">
+          🌙 Tema noturno
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Seção inicial -->
+    <section id="inicio" class="destaque">
+      <div class="destaque-conteudo">
+
+        <span class="subtitulo">INFORMAÇÃO TODOS OS DIAS</span>
+
+        <h2>
+          A tecnologia não para.
+          <span>Fique informado.</span>
+        </h2>
+
         <p>
-          O Galo Informa é um jornal digital voltado para pessoas interessadas em tecnologia. Nossa proposta é reunir as principais notícias e acontecimentos do dia anterior em um único lugar, facilitando o acesso à informação de forma simples, organizada e objetiva. O conteúdo aborda temas como inteligência artificial, software, hardware, segurança digital, games, internet e inovação. Além do site, o Galo Informa contará com um sistema de cadastro, permitindo que os leitores recebam o jornal diário diretamente por e-mail. Nosso objetivo é ajudar estudantes, profissionais, entusiastas e qualquer pessoa interessada em tecnologia a acompanhar as principais novidades do setor.
+          As principais notícias e novidades do mundo da tecnologia,
+          reunidas em um só lugar para você.
         </p>
-      </section>
-      <section id="localizacao">
-        <h2>Localização</h2>
-        <p>O mapa ou endereço da escola entra aqui.</p>
-      </section>
-      <section id="equipe">
-        <h2>Equipe</h2>
-        <ul>
-          <li>Matheus Felipe Medina Moreira</li>
-          <li>Arthur Pereira Galdino</li>
-          <li>Leonardo Arthur Viana Bacelete</li>
-          <li>João Victor Cezario Leão</li>
-          <li>Giovanna Diniz Lanna</li>
-        </ul>
-      </section>
-    </main>
 
-    <footer>
-      <p>Galo Informa</p>
-    </footer>
+        <a href="#cadastro" class="botao">Receber notícias</a>
 
-    <script src="js/script.js" defer></script>
+      </div>
+    </section>
 
-  </body>
+    <!-- Sobre a empresa -->
+    <section id="sobre">
+      <h2>Sobre a empresa</h2>
+
+      <p>
+        O Galo Informa é um jornal digital voltado para pessoas
+        interessadas em tecnologia. Nossa proposta é reunir as
+        principais notícias e acontecimentos do dia anterior em
+        um único lugar, facilitando o acesso à informação de forma
+        simples, organizada e objetiva. O conteúdo aborda temas como
+        inteligência artificial, software, hardware, segurança
+        digital, games, internet e inovação. Além do site, o
+        Galo Informa contará com um sistema de cadastro, permitindo
+        que os leitores recebam o jornal diário diretamente por
+        e-mail. Nosso objetivo é ajudar estudantes, profissionais,
+        entusiastas e qualquer pessoa interessada em tecnologia
+        a acompanhar as principais novidades do setor.
+      </p>
+    </section>
+
+    <!-- Localização -->
+    <section id="localizacao">
+      <h2>Localização</h2>
+
+      <p>
+        Av. Presidente Carlos Luz, 220 – Caiçaras,
+        Belo Horizonte – MG, 31230-010
+      </p>
+
+      <p>
+        O horário de atendimento desta unidade é de segunda a sexta,
+        das 09h às 20h30, e aos sábados, das 09h30 às 11h30.
+      </p>
+    </section>
+
+    <!-- Equipe -->
+    <section id="equipe">
+      <h2>Nossa equipe</h2>
+
+      <p>Conheça os integrantes responsáveis pelo projeto.</p>
+
+      <ul class="lista-equipe">
+        <li>Matheus Felipe Medina Moreira</li>
+        <li>Arthur Pereira Galdino</li>
+        <li>Leonardo Arthur Viana Bacelete</li>
+        <li>João Victor Cezario Leão</li>
+        <li>Giovanna Diniz Lanna</li>
+      </ul>
+    </section>
+
+    <!-- Cadastro de e-mail -->
+    <section id="cadastro" class="cadastro">
+
+      <h2>Receba notícias no seu e-mail</h2>
+
+      <p>
+        Cadastre-se gratuitamente e receba diariamente as principais
+        notícias do mundo da tecnologia.
+      </p>
+
+      <!-- Notificação de cadastro -->
+      <div
+        id="mensagem-cadastro"
+        class="notificacao-cadastro"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true">
+      </div>
+
+      <!-- Formulário -->
+      <form action="../backend/processa-contato.php" method="POST">
+
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome"
+          maxlength="100"
+          autocomplete="name"
+          aria-label="Seu nome"
+          required
+        >
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Digite seu melhor e-mail"
+          maxlength="150"
+          autocomplete="email"
+          aria-label="Seu endereço de e-mail"
+          required
+        >
+
+        <button type="submit">
+          Quero me cadastrar
+        </button>
+
+      </form>
+
+      <small>Seu cadastro é gratuito.</small>
+
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <h3>Galo Informa</h3>
+
+    <p>Seu jornal digital de tecnologia.</p>
+
+    <p>
+      &copy; 2026 Galo Informa.
+      Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js" defer></script>
+
+</body>
 </html>
