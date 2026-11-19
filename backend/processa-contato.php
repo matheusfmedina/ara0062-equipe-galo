@@ -10,7 +10,7 @@ $dadosValidos = $nome !== ''
     && filter_var($email, FILTER_VALIDATE_EMAIL)
     && strlen($email) <= 150;
 
-require_once "conexao.php";
+require_once __DIR__ . "/config/conexao.php";
 
 $cadastroRealizado = false;
 
