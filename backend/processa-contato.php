@@ -9,6 +9,29 @@ $dadosValidos = $nome !== ''
     && strlen($nome) <= 100
     && filter_var($email, FILTER_VALIDATE_EMAIL)
     && strlen($email) <= 150;
+
+require_once "conexao.php";
+
+$cadastroRealizado = false;
+
+if ($dadosValidos) {
+    try {
+        $sql = "INSERT INTO mensagens (nome, email)
+                VALUES (:nome, :email)";
+
+        $consulta = $conexao->prepare($sql);
+
+        $consulta->execute([
+            ':nome' => $nome,
+            ':email' => $email
+        ]);
+
+        $cadastroRealizado = true;
+
+    } catch (PDOException $erro) {
+        $cadastroRealizado = false;
+    }
+}
 ?>
 <!DOCTYPE html>
    <html lang="pt-BR">
@@ -24,7 +47,7 @@ $dadosValidos = $nome !== ''
          </header>
          <main>
             <section id="resposta">
-               <?php if ($dadosValidos): ?>
+              <?php if ($cadastroRealizado): ?>
                   <h2>Obrigado, <?php echo $nomeSeguro; ?>!</h2>
                   <p>
                      Seu cadastro foi realizado com sucesso.
