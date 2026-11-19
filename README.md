@@ -177,11 +177,11 @@ Substitua `NOME-DA-PASTA` pelo nome da pasta utilizada dentro de `htdocs`.
 
 | Integrante |
 |---|
-| Matheus Felipe Medina Moreira |
-| Arthur Pereira Galdino |
-| Leonardo Arthur Viana Bacelete |
-| João Victor Cezario Leão |
-| Giovanna Diniz Lanna |
+| Matheus Felipe Medina Moreira | HTML |
+| Arthur Pereira Galdino | Tópicos 1 ao 11 do CSS |
+| Leonardo Arthur Viana Bacelete | Tópicos 12 e 13 do CSS |
+| João Victor Cezario Leão | PHP |
+| Giovanna Diniz Lanna | JavaScript |
 
 ## Instituição
 
