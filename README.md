@@ -1,113 +1,196 @@
-# Equipe Galo — Galo Informa
-
-Projeto da disciplina **ARA0062 · Desenvolvimento Web em HTML5, CSS, JavaScript
-e PHP** — Centro Universitário Newton Paiva, 2026/2.
-
-## Tema do projeto
-
-Jornal diário com os principais acontecimentos do mundo da tecnologia.
-
-**Líder:** Matheus Feipe Medina Moreira
-
-| Nome completo | Matrícula | GitHub | Papel |
-|---|---|---|---|
-| Matheus Felipe Medina Moreira | 202602749611 | @matheusfmedina | **líder** |
-| Arthur Pereira Galdino | 202603673243 | @arthutgaldino14 | integrante |
-| Leonardo Arthur Viana Bacelete | 202601384775 | @leonardoarthur08 | integrante |
-| João Victor Cezario Leão | 202608088357 | @jvleao01 | integrante | 
-| Giovanna Diniz Lanna | 202608088373 | @GiovannaDinizLanna | integrante
 
 # Galo Informa
 
-*Assunto:* Jornal diário com os principais acontecimentos do mundo da tecnologia
+O **Galo Informa** é um jornal digital desenvolvido como projeto acadêmico da disciplina ARA0062, da Faculdade Newton Paiva. O site tem como objetivo reunir informações e novidades do mundo da tecnologia em um só lugar.
 
-*Equipe:* Arthur Pereira Galdino · Giovanna Diniz Lanna · João Victor Cezario Leão · Leonardo Arthur Viana Bacelete · Matheus Felipe Medina Moreira
+O projeto aborda temas como inteligência artificial, desenvolvimento de software, hardware, segurança digital, games, internet e inovação.
 
-*Disciplina:* ARA0062 — Desenvolvimento Web em HTML5, CSS, JavaScript e PHP
+## Funcionalidades
 
-*Centro Universitário Newton Paiva · 2026/2*
+- Página inicial com apresentação do projeto.
+- Seção sobre a empresa.
+- Informações de localização.
+- Apresentação dos integrantes da equipe.
+- Cadastro de leitores utilizando nome e e-mail.
+- Armazenamento dos cadastros em banco de dados MySQL.
+- Validação dos dados enviados pelo formulário.
+- Impedimento de cadastro de e-mails duplicados.
+- Alternância entre tema claro e tema noturno.
+- Salvamento da preferência de tema no navegador.
+- Notificações de sucesso e erro no cadastro.
+- Layout responsivo para dispositivos móveis.
 
----
+## Tecnologias utilizadas
 
-## Sobre o projeto
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts (Poppins)
 
-O *Galo Informa* é um jornal digital voltado para pessoas interessadas em tecnologia. O site apresenta os principais acontecimentos do mundo da tecnologia ocorridos no dia anterior, reunindo informações sobre inteligência artificial, software, hardware, segurança, games e outros assuntos relacionados à área.
+### Backend
+- PHP
+- MySQL
+- PDO
 
-Até o fim do semestre, o site terá uma página inicial, páginas de notícias e categorias, uma página sobre o projeto e um formulário para cadastro dos leitores. Os dados dos usuários cadastrados serão armazenados em um banco de dados e utilizados para o envio do jornal diário por e-mail. O projeto poderá ser atualizado conforme o desenvolvimento da equipe.
-
----
+### Ferramentas
+- XAMPP
+- Visual Studio Code
+- Git
+- GitHub
 
 ## Identidade visual
 
-Estas são as decisões que o frontend/css/estilo.css aplica. Elas estão aqui para quem lê o repositório entender **por que* o site tem essa cara — e para a equipe não mudar de ideia a cada aula.*
+O projeto utiliza uma identidade visual baseada nas seguintes cores:
 
-### Paleta
+| Cor | Código |
+|---|---|
+| Azul-marinho | `#183153` |
+| Azul-marinho escuro | `#10243d` |
+| Vermelho | `#D62828` |
+| Branco | `#FFFFFF` |
+| Cinza claro | `#F4F6F8` |
 
-| Papel                | Cor       | Por que esta                                                                 |
-| -------------------- | --------- | ---------------------------------------------------------------------------- |
-| `--principal`        | `#023d75` | Cabeçalho, títulos e botão principal; transmite confiança e tecnologia       |
-| `--principal-escuro` | `#183e4d` | Hover do botão principal, criando uma variação mais escura da cor principal  |
-| `--sobre-principal`  | `#ffffff` | Texto sobre a cor principal, garantindo boa leitura                          |
-| `--barra`            | `#004c56` | Menu e rodapé; mantém a identidade visual e diferencia as áreas de navegação |
-| `--sobre-barra`      | `#f0d7e6` | Texto sobre a barra, criando contraste e destaque                            |
-| `--apoio`            | `#055d60` | Subtítulos, cabeçalho da tabela e elementos de apoio                         |
-| `--realce`           | `#dda858` | Contornos de foco e elementos que precisam de destaque                       |
-| `--realce-suave`     | `#f0d7e6` | Fundos leves, destaques, zebra ao passar o mouse e detalhes visuais          |
-| `--fundo`            | `#f4eff2` | Fundo geral das páginas, criando uma aparência suave                         |
-| `--superficie`       | `#ffffff` | Cartões, notícias e áreas de conteúdo                                        |
-| `--zebra`            | `#faf7f9` | Linhas pares das tabelas, facilitando a leitura                              |
-| `--texto`            | `#231f20` | Texto principal das notícias e demais conteúdos                              |
-| `--texto-fraco`      | `#51506b` | Textos secundários e informações de menor destaque                           |
-| `--linha`            | `#e2d8de` | Bordas e divisórias entre elementos                                          |
+A tipografia principal utilizada é Poppins.
 
+O site também possui tema noturno, com cores adaptadas para proporcionar uma experiência de navegação confortável em ambientes com pouca iluminação.
 
-text
---texto sobre --superficie ......... 15,5:1
---principal sobre --superficie ..... 18,9:1
---sobre-principal sobre --principal  18,9:1
+## Estrutura do projeto
 
+```text
+galo-informa/
+│
+├── README.md
+│
+├── frontend/
+│   ├── index.html
+│   │
+│   ├── css/
+│   │   └── estilo.css
+│   │
+│   ├── js/
+│   │   └── script.js
+│   │
+│   └── img/
+│
+└── backend/
+    ├── config/
+    │   └── conexao.php
+    │
+    ├── sql/
+    │   └── banco.sql
+    │
+    └── processa-contato.php
+```
 
-Todos precisam ficar em 4,5:1 ou acima.
+## Banco de dados
 
-### Tipografia
+O projeto utiliza o MySQL para armazenar os dados dos leitores cadastrados.
 
-*Fonte:* "Poppins", com plano B Arial, sans-serif
-*Pesos:* 400 e 700
-*Por que esta:* a fonte possui aparência moderna e limpa, combinando com a proposta de um jornal digital de tecnologia.
+O banco de dados se chama `galo_informa` e possui a tabela `mensagens`.
 
-*Escala:* h1 2.5rem · h2 1.75rem · h3 1.25rem · corpo 1rem
+### Estrutura da tabela
 
-### Segundo tema
+| Campo | Tipo | Descrição |
+|---|---|---|
+| id | INT | Identificador automático |
+| nome | VARCHAR(100) | Nome do leitor |
+| email | VARCHAR(150) | E-mail do leitor |
+| criada_em | DATETIME | Data e hora do cadastro |
 
-*Arquivo:* frontend/css/tema-escuro.css
-*O que é:* modo escuro para permitir que o leitor visualize o jornal em uma interface com fundo escuro, mantendo a identidade visual do Galo Informa.
+O campo `email` possui uma restrição de unicidade para impedir que o mesmo endereço seja cadastrado mais de uma vez.
 
-Para ligá-lo, tire o comentário da linha do <link> no frontend/index.html.
-Ela vem *depois* do estilo.css.
+### Conexão com o banco
+
+A conexão é realizada por meio do PDO, utilizando as seguintes configurações padrão do XAMPP:
+
+| Configuração | Valor |
+|---|---|
+| Servidor | localhost |
+| Banco de dados | galo_informa |
+| Usuário | root |
+| Senha | Vazia |
+| Codificação | utf8mb4 |
+
+As configurações podem ser alteradas no arquivo `backend/config/conexao.php`, conforme o ambiente utilizado.
+
+## Como executar o projeto
+
+### 1. Instalar o XAMPP
+
+Instale o XAMPP para disponibilizar os serviços Apache e MySQL no ambiente local.
+
+### 2. Colocar o projeto no servidor local
+
+Copie a pasta do projeto para o diretório `htdocs` do XAMPP.
+
+No Windows, normalmente:
+
+```text
+C:\xampp\htdocs\
+```
+
+### 3. Iniciar os serviços
+
+Abra o painel de controle do XAMPP e inicie:
+
+- Apache
+- MySQL
+
+### 4. Criar o banco de dados
+
+1. Acesse `http://localhost/phpmyadmin`.
+2. Entre na opção **Importar**.
+3. Selecione o arquivo `backend/sql/banco.sql`.
+4. Execute a importação.
+
+O banco de dados `galo_informa` e a tabela `mensagens` serão criados automaticamente.
+
+### 5. Configurar a conexão
+
+Abra o arquivo:
+
+```text
+backend/config/conexao.php
+```
+
+Verifique se as credenciais correspondem à configuração do seu MySQL:
+
+```php
+$host = "localhost";
+$banco = "galo_informa";
+$usuario = "root";
+$senha = "";
+```
+
+### 6. Acessar o projeto
+
+Com o Apache e o MySQL iniciados, abra o navegador e acesse:
+
+```text
+http://localhost/NOME-DA-PASTA/frontend/
+```
+
+Substitua `NOME-DA-PASTA` pelo nome da pasta utilizada dentro de `htdocs`.
+
+## Equipe responsável
+
+| Integrante |
+|---|
+| Matheus Felipe Medina Moreira |
+| Arthur Pereira Galdino |
+| Leonardo Arthur Viana Bacelete |
+| João Victor Cezario Leão |
+| Giovanna Diniz Lanna |
+
+## Instituição
+
+**Faculdade Newton Paiva — Grupo Wyden**
+
+**Disciplina:** ARA0062
+
+**Ano:** 2026
 
 ---
 
-## Como abrir
-
-1. Abra *a pasta inteira* no VS Code (Arquivo → Abrir Pasta).
-2. Abra frontend/index.html e clique em *Go Live* (extensão Live Server).
-
----
-
-## Estrutura
-
-text
-.
-├─ README.md                 esta folha de rosto
-├─ frontend/                 tudo o que roda no navegador
-│   ├─ index.html
-│   ├─ css/
-│   │   ├─ estilo.css        a folha do projeto
-│   │   └─ noturno.css   o segundo tema: só variáveis
-│   ├─ js/
-│   │   └─ script.js         vazio até o ciclo 6
-│   └─ img/
-└─ backend/                  tudo o que roda no servidor
-    ├─ config/
-    │   └─ conexao.php       vazio até o ciclo 8
-    └─ processa-contato.php
+Projeto acadêmico desenvolvido pela Equipe Galo.
