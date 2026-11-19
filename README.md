@@ -175,8 +175,8 @@ Substitua `NOME-DA-PASTA` pelo nome da pasta utilizada dentro de `htdocs`.
 
 ## Equipe responsável
 
-| Integrante |
-|---|
+| Integrante | Parte Feita |
+|---|---|
 | Matheus Felipe Medina Moreira | HTML |
 | Arthur Pereira Galdino | Tópicos 1 ao 11 do CSS |
 | Leonardo Arthur Viana Bacelete | Tópicos 12 e 13 do CSS |
