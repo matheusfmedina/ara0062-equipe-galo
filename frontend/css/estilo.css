@@ -469,6 +469,36 @@ button:focus {
   margin-top: 15px;
 }
 
+.lista-usuarios {
+  max-width: 800px;
+  margin: 35px auto 0;
+  text-align: left;
+}
+
+.lista-usuarios h2 {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  margin-top: 0;
+}
+
+.lista-usuarios > p {
+  color: #e0e6ed;
+}
+
+.tabela-usuarios {
+  overflow-x: auto;
+  background-color: var(--superficie);
+  border-radius: 6px;
+}
+
+.lista-usuarios table {
+  margin: 0;
+}
+
+.lista-usuarios caption {
+  padding: 12px 14px;
+}
+
 
 /* ==========================================================================
    10. BARRA LATERAL E RODAPÉ

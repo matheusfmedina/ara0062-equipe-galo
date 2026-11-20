@@ -3,14 +3,13 @@
 // ==========================================================
 
 const botaoTema = document.getElementById("alternar-tema");
+const temaSalvo = localStorage.getItem("tema");
+
+if (temaSalvo === "noturno") {
+    document.body.classList.add("tema-noturno");
+}
 
 if (botaoTema) {
-    const temaSalvo = localStorage.getItem("tema");
-
-    if (temaSalvo === "noturno") {
-        document.body.classList.add("tema-noturno");
-    }
-
     botaoTema.textContent = document.body.classList.contains("tema-noturno")
         ? "☀️ Tema claro"
         : "🌙 Tema noturno";
@@ -57,26 +56,116 @@ const mensagens = {
     }
 };
 
-if (statusCadastro && mensagens[statusCadastro] && mensagemCadastro) {
+function mostrarMensagemCadastro(status) {
+    if (!mensagens[status] || !mensagemCadastro) {
+        return;
+    }
 
-    // Define o texto da notificação
-    mensagemCadastro.textContent = mensagens[statusCadastro].texto;
+    mensagemCadastro.textContent = mensagens[status].texto;
 
-    // Adiciona a classe correspondente
+    mensagemCadastro.classList.remove("mensagem-sucesso", "mensagem-erro");
     mensagemCadastro.classList.add(
         "notificacao-visivel",
-        mensagens[statusCadastro].classe
+        mensagens[status].classe
     );
 
-    // Remove a notificação após 5 segundos
     setTimeout(function () {
         mensagemCadastro.classList.remove("notificacao-visivel");
     }, 5000);
+}
 
-    // Limpa o parâmetro da URL
+if (statusCadastro && mensagens[statusCadastro]) {
+    mostrarMensagemCadastro(statusCadastro);
+
     window.history.replaceState(
         {},
         document.title,
         window.location.pathname + "#cadastro"
     );
+}
+
+// ==========================================================
+// 3. VALIDACAO DO FORMULARIO
+// ==========================================================
+
+const formulario = document.querySelector(".cadastro form");
+
+if (formulario) {
+    const campoNome = formulario.querySelector('[name="nome"]');
+    const campoEmail = formulario.querySelector('[name="email"]');
+
+    formulario.addEventListener("invalid", function () {
+        mostrarMensagemCadastro("invalido");
+    }, true);
+
+    formulario.addEventListener("submit", function (evento) {
+        if (!campoNome.value.trim()) {
+            evento.preventDefault();
+            mostrarMensagemCadastro("invalido");
+            campoNome.focus();
+            return;
+        }
+
+        if (!campoEmail.value.trim() || !campoEmail.validity.valid) {
+            evento.preventDefault();
+            mostrarMensagemCadastro("invalido");
+            campoEmail.focus();
+        }
+    });
+}
+
+const listaUsuarios = document.getElementById("lista-usuarios");
+const statusUsuarios = document.getElementById("status-usuarios");
+
+async function carregarUsuarios() {
+    if (!listaUsuarios || !statusUsuarios) {
+        return;
+    }
+
+    try {
+        const resposta = await fetch("../backend/lista-usuarios.php", {
+            cache: "no-store"
+        });
+
+        if (!resposta.ok) {
+            throw new Error("Falha ao consultar usuários.");
+        }
+
+        const usuarios = await resposta.json();
+        if (!Array.isArray(usuarios)) {
+            throw new Error("Resposta inválida ao consultar usuários.");
+        }
+
+        listaUsuarios.replaceChildren();
+
+        if (usuarios.length === 0) {
+            statusUsuarios.textContent = "Ainda não há usuários cadastrados.";
+            return;
+        }
+
+        usuarios.forEach(function (usuario) {
+            const linha = document.createElement("tr");
+            const nome = document.createElement("td");
+            const email = document.createElement("td");
+
+            nome.textContent = usuario.nome;
+            email.textContent = usuario.email;
+            linha.append(nome, email);
+            listaUsuarios.appendChild(linha);
+        });
+
+        statusUsuarios.textContent = "";
+    } catch (erro) {
+        statusUsuarios.textContent = "Não foi possível carregar os usuários cadastrados.";
+    }
+}
+
+if (listaUsuarios && statusUsuarios) {
+    carregarUsuarios();
+    window.setInterval(carregarUsuarios, 30000);
+    document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) {
+            carregarUsuarios();
+        }
+    });
 }

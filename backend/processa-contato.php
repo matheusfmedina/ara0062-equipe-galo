@@ -33,20 +33,6 @@ if ($dadosValidos) {
     }
 }
 
-header('Content-Type: application/json; charset=utf-8');
-
-require_once __DIR__ . '/config/conexao.php';
-
-try {
-    $consulta = $conexao->query(
-        'SELECT nome, email FROM mensagens ORDER BY criada_em DESC, id DESC'
-    );
-
-    echo json_encode($consulta->fetchAll(PDO::FETCH_ASSOC), JSON_UNESCAPED_UNICODE);
-} catch (PDOException $erro) {
-    http_response_code(500);
-    echo json_encode(['erro' => 'Não foi possível carregar os usuários cadastrados.']);
-}
 
 ?>
 <!DOCTYPE html>
@@ -56,6 +42,7 @@ try {
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>Mensagem recebida — Equipe Galo</title>
          <link rel="stylesheet" href="../frontend/css/estilo.css">
+         <script src="../frontend/js/script.js" defer></script>
       </head>
       <body>
          <header>
@@ -74,7 +61,7 @@ try {
                   <h2>Não foi possível confirmar seu cadastro</h2>
                   <p>Informe um nome válido e um endereço de e-mail válido.</p>
                <?php endif; ?>
-               <p><a href="../frontend/index.html#contato">← Voltar para a página</a></p>
+               <p><a href="../frontend/index.html#cadastro">← Voltar para a página</a></p>
             </section>
          </main>
          <footer>
