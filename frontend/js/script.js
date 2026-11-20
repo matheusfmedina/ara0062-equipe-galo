@@ -47,7 +47,7 @@ const mensagens = {
         classe: "mensagem-erro"
     },
     invalido: {
-        texto: "Verifique os dados informados e tente novamente.",
+        texto: "Verifique os dados informados e tente outra vez.",
         classe: "mensagem-erro"
     },
     erro: {
